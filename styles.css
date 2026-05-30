@@ -1,0 +1,677 @@
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #020617;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.timeline-experience {
+    width: 100%;
+}
+.chapter-label {
+
+    color: #6ee7ff;
+
+    letter-spacing: 6px;
+
+    font-size: 12px;
+
+    margin-bottom: 20px;
+}
+
+.year {
+
+    font-size: clamp(80px, 10vw, 160px);
+
+    line-height: .9;
+
+    margin-bottom: 20px;
+}
+
+.title {
+
+    font-size: 40px;
+
+    margin-bottom: 24px;
+}
+
+.description {
+
+    max-width: 700px;
+
+    line-height: 1.8;
+
+    color: rgba(255,255,255,.75);
+
+    font-size: 20px;
+}
+
+
+
+/* =========================================
+   FULLSCREEN SECTIONS
+========================================= */
+.panel-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 700px;
+
+    margin-left: 120px;
+}
+.hero,
+.timeline-panel {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 8%;
+}
+
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-content {
+    max-width: 650px;
+    z-index: 2;
+}
+
+.chapter {
+    color: #6ee7ff;
+
+    letter-spacing: 8px;
+
+    font-size: 12px;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: clamp(70px, 10vw, 140px);
+
+    line-height: 0.9;
+
+    margin-bottom: 40px;
+
+    font-weight: 800;
+}
+
+.hero-description {
+    font-size: 22px;
+
+    line-height: 1.7;
+
+    color: rgba(255,255,255,0.7);
+
+    max-width: 600px;
+}
+.hero {
+
+    padding-bottom: 100px;
+
+
+}
+
+/* =========================================
+   HERO ORB
+========================================= */
+
+.hero-visual {
+    position: relative;
+
+    width: 400px;
+    height: 400px;
+    /*for cube*/
+    perspective: 1600px;
+    margin: 15% auto;
+}
+
+.hero-orb {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(100,220,255,0.95) 0%,
+            rgba(100,220,255,0.2) 40%,
+            rgba(100,220,255,0.02) 70%,
+            transparent 100%
+        );
+
+    filter: blur(8px);
+
+    opacity: 0.9;
+    animation: floatOrb 8s ease-in-out infinite;
+}
+@keyframes  floatOrb {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform:  translateY(-30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+} 
+
+/*=========================================
+    FLOAT CUBE
+========================================== */
+
+.hero-cube {
+    height: 100%;
+    width: 100%;
+    transform-style:preserve-3d;
+    animation: spin 20s linear infinite;
+
+}
+.face {
+    background:
+        radial-gradient(
+            circle,
+            rgba(0,113,197,0.95) 0%,
+            rgba(0,113,197,0.2) 40%,
+            rgba(0,113,197,0.02) 70%,
+            transparent 100%
+    );
+    filter: blur(30px);
+    position: absolute;
+    border: 2px solid #0071C5;
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    text-align: center;
+}
+.face.front{transform:translateZ(200px);}
+.face.back{transform:rotateY(180deg) translateZ(200px);}
+.face.left{transform:rotateY(90deg) translateZ(200px);}
+.face.right{transform:rotateY(-90deg) translateZ(200px);}
+.face.top{transform:rotateX(90deg) translateZ(200px);}
+.face.bottom{transform:rotateX(-90deg) translateZ(200px);}
+
+@keyframes spin {
+    0%{transform: rotateX(0deg) rotateY(0deg)}
+    100%{transform: rotateX(360deg) rotateY(360deg)}
+
+}   
+
+
+
+/* =========================================
+   TIMELINE RAIL
+========================================= */
+
+.timeline-rail {
+    position: fixed;
+
+    left: 40px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Vertical line */
+.timeline-track {
+    position: relative;
+
+    width: 2px;
+    height: 240px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border-radius: 999px;
+}
+
+/* Active glowing progress */
+.timeline-progress {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 20%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #6ee7ff,
+            #38bdf8
+        );
+
+    box-shadow:
+        0 0 20px rgba(110,231,255,0.6);
+
+    border-radius: 999px;
+}
+
+/* Active node */
+.timeline-node {
+    position: absolute;
+
+    top: 20%;
+    left: 50%;
+
+    width: 12px;
+    height: 12px;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: #6ee7ff;
+
+    box-shadow:
+        0 0 25px rgba(110,231,255,0.9);
+}
+
+/* Floating glass display */
+.timeline-display {
+
+    width: 100px;
+
+    padding: 18px 18px;
+
+    border-radius: 22px;
+
+    background:
+        rgba(255,255,255,0.05);
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.3);
+}
+
+/* Year */
+.timeline-year {
+    display: block;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    margin-bottom: 6px;
+
+    color: white;
+}
+
+/* Title */
+.timeline-title {
+    
+    color:
+        rgba(255,255,255,0.65);
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+
+
+
+/* =========================================
+   Circuit Timeline
+========================================= */
+
+.circuit-timeline {
+    margin-top: -50px;
+    
+    position: relative;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 100px 0 200px;
+}
+.timeline-entry {
+
+    position: relative;
+
+    width: 42%;
+
+    margin: 120px 0;
+}
+
+.timeline-entry.left {
+
+    left: 0;
+
+    padding-right: 100px;
+
+    text-align: right;
+}
+
+.timeline-entry.right {
+
+    left: 50%;
+
+    padding-left: 100px;
+}
+
+
+
+/** CardStyle  */
+
+.timeline-card {
+
+    padding: 32px;
+
+    border-radius: 24px;
+
+    background:
+        rgba(255,255,255,.04);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    backdrop-filter: blur(20px);
+
+    transition: .4s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/**   Circut Node  */
+.timeline-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(110,231,255,.5),
+
+            transparent
+
+        );
+
+    transform: translateX(-100%);
+
+    pointer-events: none;
+}
+.timeline-node {
+
+    position: absolute;
+
+    top: 50%;
+
+    right: -12px;
+
+    width: 24px;
+
+    height: 24px;
+
+    border-radius: 50%;
+
+    background: #6ee7ff;
+
+    box-shadow:
+        0 0 20px #6ee7ff,
+        0 0 50px #6ee7ff;
+}
+.timeline-entry.left .circuit-branch {
+
+    right: -120px;
+}
+
+.timeline-entry.right .timeline-node {
+
+    left: -12px;
+}
+
+/**branch */
+.circuit-branch {
+
+    position: absolute;
+
+    top: 50%;
+
+    width: 120px;
+
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(110,231,255,.1),
+        rgba(110,231,255,.9)
+    );
+
+    box-shadow:
+        0 0 15px rgba(110,231,255,.5),
+        0 0 30px rgba(110,231,255,.3);
+
+    transform: translateY(-50%);
+}
+.timeline-entry.left .circuit-branch {
+
+    right: 0;
+}
+.timeline-entry.right .circuit-branch {
+
+    left: 0;
+}
+.timeline-node {
+
+    animation:
+        pulse 3s infinite;
+}
+@keyframes pulse {
+
+    0% {
+
+        box-shadow:
+            0 0 10px #6ee7ff;
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 40px #6ee7ff;
+    }
+
+    100% {
+
+        box-shadow:
+            0 0 10px #6ee7ff;
+    }
+}
+.circuit-spine {
+
+    position: absolute;
+    width:4px;
+    height:100%;
+    background:rgba(225,225,225, .08)
+}
+.circuit-spine {
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+}
+.progress-spine{
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 0%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #38bdf8,
+            #6ee7ff
+        );
+
+    box-shadow:
+        0 0 20px #6ee7ff;
+}
+.circuit-timeline {
+
+    position: relative;
+}
+
+.circuit-timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -300px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 900px;
+
+    height: 900px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0,113,197,.15),
+            transparent 30%
+        );
+
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+@keyframes currentFlow {
+
+    0% {
+
+        opacity: .3;
+
+        transform:
+            translateY(-50%)
+            scaleX(.95);
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            translateY(-50%)
+            scaleX(1.05);
+    }
+
+    100% {
+
+        opacity: .3;
+
+        transform:
+            translateY(-50%)
+            scaleX(.95);
+    }
+}
+
+.circuit-branch {
+
+    animation:
+        currentFlow 3s ease-in-out infinite;
+}
+
+.timeline-node.active {
+
+    background: #6ee7ff;
+
+    box-shadow:
+
+        0 0 20px #6ee7ff,
+
+        0 0 60px #6ee7ff;
+}
+
+
+.card-image {
+
+    width: 100%;
+
+    height: 240px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    margin-bottom: 24px;
+}
+
+.card-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .6s ease;
+}
+
+.timeline-card:hover img {
+
+    transform: scale(1.05);
+}
