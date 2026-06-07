@@ -1,11 +1,16 @@
-<html>
+<html lang="en" dir="ltr" id="html-root">
     <header>
-        <title>Intel</title>
+        <title>Intel - Sustainability Through The Ages</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Explore Intel's journey through innovation, sustainability, and the future of technology.">
+        
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+        
         <link rel="stylesheet"  href="styles.css">
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-        
-        
     </header>
 
     <body>
@@ -18,39 +23,23 @@
            
 
            
-            <!-- Timeline Sidebar 
-            <aside class="timeline-rail">
-
-                <div class="timeline-track">
-
-                    <div class="timeline-progress"></div>
-
-                    <div class="timeline-node active-node"></div>
-
-                </div>
-
-                <div class="timeline-display">
-
-                    <span class="timeline-year">
-                        1968
-                    </span>
-
-                    <p class="timeline-title">
-                        Intel Founded
-                    </p>
-
-                </div>
-
-
-
-            </aside>
-            -->
 
             <!-- Main Scroll Experience -->
             <main class="timeline-experience">
 
                 <!-- HERO SECTION -->
-                <section class="hero">
+                <section class="hero" role="region" aria-label="Hero Section">
+
+                    <!-- Language Toggle Button -->
+                    <button 
+                        id="lang-toggle" 
+                        class="lang-toggle"
+                        aria-label="Toggle Arabic View"
+                        aria-pressed="false"
+                        title="Click to switch to Arabic View">
+                        <i class="bi bi-globe"></i>
+                        <span class="lang-text">العربية</span>
+                    </button>
 
                     <div class="hero-content">
 
@@ -83,244 +72,249 @@
 
                 </section>
 
-                <section class="circuit-timeline">
+                <section class="story-experience" role="region" aria-label="Intel Storytelling Experience">
+                    <div class="story-panels">
+                        <section class="story-panel panel-1968" role="group" aria-labelledby="panel-title-1968">
+                            <div class="panel-bg"></div>
+                            <div class="panel-overlay"></div>
+                            <div class="panel-glow"></div>
+                            <div class="panel-artifact">
+                                <img src="assets/1968.webp" alt="Three male founders of Intel sitting together on desk.">
+                            </div>
+                            <div class="panel-content">
+                                <p class="panel-year">1968</p>
+                                <h2 class="panel-title" id="panel-title-1968">Intel Founded</h2>
+                                <p class="panel-description">Intel began as a visionary semiconductor startup, inventing the foundation of modern computing and building a future-driven legacy.</p>
+                            </div>
+                        </section>
 
-                    <div class="circuit-spine">
-                        <div class="progress-spine"></div>
-                        
+                        <section class="story-panel panel-1971" role="group" aria-labelledby="panel-title-1971">
+                            <div class="panel-bg"></div>
+                            <div class="panel-overlay"></div>
+                            <div class="panel-glow"></div>
+                            <div class="panel-artifact">
+                                <img src="assets/1971.jpg" alt="Top view of first microprocessor">
+                            </div>
+                            <div class="panel-content">
+                                <p class="panel-year">1971</p>
+                                <h2 class="panel-title" id="panel-title-1971">First Microprocessor</h2>
+                                <p class="panel-description">The Intel 4004 introduced programmable computing in a single chip, transforming the future of technology with a bold new platform for innovation.</p>
+                            </div>
+                        </section>
+
+                        <section class="story-panel panel-1985" role="group" aria-labelledby="panel-title-1985">
+                            <div class="panel-bg"></div>
+                            <div class="panel-overlay"></div>
+                            <div class="panel-glow"></div>
+                            <div class="panel-artifact">
+                                <img src="assets/1985.jpg" alt="Top down view of processor 386">
+                            </div>                            
+                            <div class="panel-content">
+                                <p class="panel-year">1985</p>
+                                <h2 class="panel-title" id="panel-title-1985">386 Processor</h2>
+                                <p class="panel-description">The 386 processor unlocked 32-bit performance, multitasking, and power that accelerated enterprise computing and personal productivity worldwide.</p>
+                            </div>
+                        </section>
+
+                        <section class="story-panel panel-2006" role="group" aria-labelledby="panel-title-2006">
+                            <div class="panel-bg"></div>
+                            <div class="panel-overlay"></div>
+                            <div class="panel-glow"></div>
+                            <div class="panel-artifact">
+                                <img src="assets/2006.jpg" alt="Side view of glass office building">
+                            </div>                            
+                            <div class="panel-content">
+                                <p class="panel-year">2006</p>
+                                <h2 class="panel-title" id="panel-title-2006">Peak GHG Emissions</h2>
+                                <p class="panel-description">Intel reached its highest emissions year, then pivoted with energy efficiency and renewable investments to begin a new sustainability chapter.</p>
+                            </div>
+                        </section>
+                        <section class="story-panel panel-2020" role="group" aria-labelledby="panel-title-2020">
+                            <div class="panel-bg"></div>
+                            <div class="panel-overlay"></div>
+                            <div class="panel-glow"></div>
+                            <div class="panel-artifact">
+                                <img src="assets/2020.jpg" alt="manufacturing plant with smoke bellowing from chimney.">
+                            </div>                            
+                            <div class="panel-content">
+                                <p class="panel-year">2020</p>
+                                <h2 class="panel-title" id="panel-title-2020">RISE Strategy</h2>
+                                <p class="panel-description">Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.</p>
+                            </div>
+                        </section>
+                        <section class="story-panel panel-2023" role="group" aria-labelledby="panel-title-2023">
+                            <div class="panel-bg"></div>
+                            <div class="panel-overlay"></div>
+                            <div class="panel-glow"></div>
+                            <div class="panel-artifact">
+                                <img src="assets/2023.jpg" alt="Large solar panels in field of bright green grass">
+                            </div>                            
+                            <div class="panel-content">
+                                <p class="panel-year">2023</p>
+                                <h2 class="panel-title" id="panel-title-2024">Net Zero by 2040</h2>
+                                <p class="panel-description">Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives.</p>
+                            </div>
+                        </section>
+                        <section class="story-panel panel-2024" role="group" aria-labelledby="panel-title-2024">
+                            <div class="panel-bg"></div>
+                            <div class="panel-overlay"></div>
+                            <div class="panel-glow"></div>
+                            <div class="panel-artifact">
+                                <img src="assets/2024.jpg" alt="Close of image of intel logo statue outside office building.">
+                            </div>                            
+                            <div class="panel-content">
+                                <p class="panel-year">2024</p>
+                                <h2 class="panel-title" id="panel-title-2024">99% Renewable Electricity</h2>
+                                <p class="panel-description">Intel now powers the majority of its operations with clean energy, making sustainability a core part of its high-performance innovation story.</p>
+                            </div>
+                        </section>
                     </div>
 
-                    <!-- Timeline Entries Go Here -->
-                     <!--1968-->
-
-                    <div class="timeline-entry left">
-                        <div class="circut-branch"></div>
-    
-                        <div class="timeline-node"></div>
-    
-                        <div class="timeline-card ">
-
-                            <div class="card-image">
-
-                                <img
-                                    src="assets/1968.webp"
-                                    alt="Intel Founded"
-                                >
-
+                    <div class="marquee-contianer" aria-hidden="true">
+                        <div class ="marquee-track">
+                            <div class ="marquee-content">
+                                <span>INTEL</span>
+                                <span>INNOVATION</span>
+                                <span>SUSTAINABILITY</span>
+                                <span>AI</span>
+                                <span>RENEWABLE ENERGY</span>
                             </div>
-    
-                            <h2>1968</h2>
-    
-                            <h3>Intel Founded</h3>
-    
-                            <p>
-                                Intel Corporation was founded on July 18, 1968. It was established by pioneers Robert Noyce and Gordon Moore—co-inventor of the integrated circuit and author of Moore's Law
-                            </p>
-    
+                            <!--FOR ACCESSIBILITY USERS-->
+                            <div class ="marquee-content">
+                                <span>INTEL</span>
+                                <span>INNOVATION</span>
+                                <span>SUSTAINABILITY</span>
+                                <span>AI</span>
+                                <span>RENEWABLE ENERGY</span>
+                            </div>
+
                         </div>
-    
+
+                    </div>
+                </section>
+
+            <!-- SUSTAINABILITY FEATURES SECTION -->
+            <section class="sustainability-features" role="region" aria-label="Sustainability Features">
+                <div class="container py-5">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="section-title">Intel's Sustainability Pillars</h2>
+                        <p class="section-subtitle">Driving positive change through three key focus areas</p>
                     </div>
 
-                    <!--1971-->
-                    <div class="timeline-entry right">
-                        <div class="circut-branch"></div>
-    
-                        <div class="timeline-node"></div>
-    
-                        <div class="timeline-card">
-                            
-                                                    
-                            <div class="card-image">
 
-                                <img
-                                    src="assets/1971.jpg"
-                                    alt="Intel Founded"
-                                >
-
+                    
+                    <div class="row g-4">
+                        <!-- Global Impact -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="feature-card" aria-labelledby="impact-title" tabindex="0">
+                                <div class="feature-icon">
+                                    <i class="bi bi-globe"></i>
+                                </div>
+                                <div class="stat" aria-hidden="false">
+                                    <span class="stat-number" data-target="63">0</span>
+                                    <span class="stat-suffix">+</span>
+                                </div>
+                                <h3 id="impact-title">Global Impact</h3>
+                                <p>
+                                    Highlight Intel's worldwide sustainability initiatives, working across continents to reduce environmental impact and promote responsible manufacturing practices globally.
+                                </p>
                             </div>
-    
-                            <h2>1971</h2>
-    
-                            <h3>First Microprocessor</h3>
-    
-                            <p>
-                               Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices.
-                            </p>
-    
                         </div>
-    
+
+                        <!-- Circular Economy -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="feature-card" aria-labelledby="circular-title" tabindex="0">
+                                <div class="feature-icon">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number" data-target="78">0</span>
+                                    <span class="stat-suffix">%</span>
+                                </div>
+                                <h3 id="circular-title">Circular Economy</h3>
+                                <p>
+                                    Explain Intel's commitment to reducing waste and increasing recycling efforts, creating a sustainable ecosystem where products and materials are reused responsibly.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Renewable Energy -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="feature-card" aria-labelledby="renewable-title" tabindex="0">
+                                <div class="feature-icon">
+                                    <i class="bi bi-lightning-fill"></i>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number" data-target="99">0</span>
+                                    <span class="stat-suffix">%</span>
+                                </div>
+                                <h3 id="renewable-title">Renewable Energy</h3>
+                                <p>
+                                    Showcase Intel's investments in clean and renewable energy sources, with 99% renewable electricity usage worldwide powering sustainable manufacturing operations.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </section>
 
-                    <!--1978-->
-                    <div class="timeline-entry left">
-                        <div class="circut-branch"></div>
-    
-                        <div class="timeline-node"></div>
-    
-                        <div class="timeline-card">
-                            
-                            <div class="card-image">
-
-                                <img
-                                    src="assets/1978.jpg"
-                                    alt="Intel Founded"
-                                >
-
-                            </div>
-    
-                            <h2>1968</h2>
-    
-                            <h3>Processor 8086</h3>
-    
-                            <p>
-                                Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era.
-                            </p>
-    
+            <!-- NEWSLETTER SUBSCRIPTION SECTION -->
+            <section class="newsletter-section" role="region" aria-label="Premium Signup">
+                <div class="container">
+                    <div class="premium-card" id="premium-signup" role="form" aria-labelledby="signup-heading">
+                        <div class="premium-content">
+                            <h2 id="signup-heading">Get Intel Sustainability Insights</h2>
+                            <p class="lead">Join our premium list for in-depth reports, early announcements, and exclusive sustainability insights.</p>
                         </div>
-    
+
+                        <form class="newsletter-form premium-form" id="newsletter-form" novalidate>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="subscriber-name" class="form-label">Full Name</label>
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        id="subscriber-name"
+                                        placeholder="Your name"
+                                        required
+                                        aria-required="true"
+                                    >
+                                    <div class="invalid-feedback" role="alert">
+                                        Please provide your name.
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="subscriber-email" class="form-label">Work Email</label>
+                                    <input 
+                                        type="email" 
+                                        class="form-control" 
+                                        id="subscriber-email"
+                                        placeholder="you@company.com"
+                                        required
+                                        aria-required="true"
+                                    >
+                                    <div class="invalid-feedback" role="alert">
+                                        Please provide a valid email address.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button 
+                                    type="submit" 
+                                    class="btn btn-cta btn-subscribe" 
+                                    id="cta-submit"
+                                    aria-label="Join premium insights">
+                                    Join Insights
+                                </button>
+                                <div id="signup-status" class="signup-status" role="status" aria-live="polite"></div>
+                            </div>
+                        </form>
                     </div>
-
-                    <!--1985-->
-                    <div class="timeline-entry right">
-                        
-                        <div class="circut-branch"></div>
-
-                        <div class="timeline-node"></div>
-    
-                        <div class="timeline-card">
-
-                            <div class="card-image">
-
-                                <img
-                                    src="assets/1985.jpg"
-                                    alt="Intel Founded"
-                                >
-
-                            </div>
-    
-                            <h2>1985</h2>
-    
-                            <h3>Processor 386</h3>
-    
-                            <p>
-                             Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers
-                            </p>
-    
-                        </div>
-    
-                    </div>   
-
-                    <!--2006-->
-                    <div class="timeline-entry left">
-                        <div class="circut-branch"></div>    
-                        <div class="timeline-node"></div>
-    
-                        <div class="timeline-card">
-
-                            <div class="card-image">
-
-                                <img
-                                    src="assets/ghg.jpg"
-                                    alt="Intel Founded"
-                                >
-
-                            </div>
-                            
-                            <h2>2006</h2>
-    
-                            <h3>Peak GHG Emissions</h3>
-    
-                            <p>
-                                This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend.
-                            </p>
-    
-                        </div>
-    
-                    </div> 
-
-                    <!--2020-->
-                    <div class="timeline-entry right">
-                        <div class="circut-branch"></div>
-                        <div class="timeline-node"></div>
-    
-                        <div class="timeline-card">
-
-                            <div class="card-image">
-
-                                <img
-                                    src="assets/2020.jpg"
-                                    alt="Intel Founded"
-                                >
-
-                            </div>
-    
-                            <h2>2020</h2>
-    
-                            <h3>RISE Strategy</h3>
-    
-                            <p>
-                                Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.
-                            </p>
-    
-                        </div>
-    
-                    </div>                    
-                    <!--2023-->
-                    <div class="timeline-entry left">
-                        <div class="circut-branch"></div>
-                        <div class="timeline-node"></div>
-    
-                        <div class="timeline-card">
-                            
-                            <div class="card-image">
-
-                                <img
-                                    src="assets/2023.jpg"
-                                    alt="Intel Founded"
-                                >
-
-                            </div>
-                            
-                            <h2>2023</h2>
-    
-                            <h3>Net Zero By 2040</h3>
-    
-                            <p>
-                            Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives.
-                            </p>
-    
-                        </div>
-    
-                    </div>                     
-                    <!--2024-->
-                    <div class="timeline-entry right">
-                        <div class="circut-branch"></div>
-                        <div class="timeline-node"></div>
-    
-                        <div class="timeline-card">
-
-                            <div class="card-image">
-
-                                <img
-                                    src="assets/2024.jpg"
-                                    alt="Intel Founded"
-                                >
-
-                            </div>
-                            
-                            <h2>2024</h2>
-    
-                            <h3>Renewable Electricity</h3>
-    
-                            <p>
-                            The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals.
-                            </p>
-    
-                        </div>
-    
-                    </div>    
-            </section>                
-            </main>
+                </div>
+            </section>
+            
 
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
